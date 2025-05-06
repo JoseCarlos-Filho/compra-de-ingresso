@@ -67,3 +67,18 @@ function cadeiraSuperior(qtda) {
     alert("Compra realizada com sucesso!");
     document.getElementById("qtd").value = "";
 }
+
+function pista(qtda) {
+    let quantidadePista = document.getElementById("qtd-pista");
+    let qtdaPistaAtual = parseInt(quantidadePista.textContent);
+    let qtdaDeCompra = parseInt(qtda);
+    
+    if (qtdaDeCompra > qtdaPistaAtual) {
+        alert("Quantidade de cadeiras inferiores indisponível");
+        return;
+    }
+
+    quantidadePista.textContent = qtdaPistaAtual - qtdaDeCompra;
+    alert("Compra realizada com sucesso!");
+    document.getElementById("qtd").value = "";
+}
