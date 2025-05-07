@@ -37,6 +37,10 @@ function comprar() {
     }
 }
 
+function limpaCampoQuantidade() {
+    document.getElementById("qtd").value = "";
+}
+
 function cadeiraInferior(qtda) {
     
     let quantidadeInferior = document.getElementById("qtd-inferior");
@@ -50,7 +54,7 @@ function cadeiraInferior(qtda) {
 
     quantidadeInferior.textContent = qtdaInferiorAtual - qtdaDeCompra;
     alert("Compra realizada com sucesso!");
-    document.getElementById("qtd").value = "";
+    limpaCampoQuantidade();
 }
 
 function cadeiraSuperior(qtda) { 
@@ -65,7 +69,7 @@ function cadeiraSuperior(qtda) {
 
     quantidadeSuperior.textContent = qtdaSuperiorAtual - qtdaDeCompra;
     alert("Compra realizada com sucesso!");
-    document.getElementById("qtd").value = "";
+    limpaCampoQuantidade();
 }
 
 function pista(qtda) {
@@ -80,5 +84,5 @@ function pista(qtda) {
 
     quantidadePista.textContent = qtdaPistaAtual - qtdaDeCompra;
     alert("Compra realizada com sucesso!");
-    document.getElementById("qtd").value = "";
+    limpaCampoQuantidade();
 }
