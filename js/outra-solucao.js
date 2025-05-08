@@ -51,5 +51,8 @@ function efetuarCompra(tipoIngresso, qtd) {
         alert(`Quantidade indisponível para ingressos do tipo "${tipoIngresso}".`);
         return;
     }
-     
+
+    elementoQtdaDisponivel.textContent = qtdaDisponivel - qtd;
+    alert("Compra realizada com sucesso!");
+    document.getElementById("qtd").value = "";
 }
